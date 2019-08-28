@@ -17,6 +17,7 @@ questions = [
         'type': 'input',
         'name': 'instances',
         'message': 'JDownloader instances',
+        'when': lambda answers: answers['start_containers']
     },
     {
         'type': 'input',
@@ -32,6 +33,7 @@ questions = [
         'type': 'input',
         'name': 'jd_volume',
         'message': 'Download path',
+        'when': lambda answers: answers['start_containers']
     },
     {
         'type': 'confirm',
@@ -43,19 +45,19 @@ questions = [
         'type': 'input',
         'name': 'vpn_username',
         'message': 'Windscribe username',
-        'when': lambda answers: answers['use_windscribe']
+        'when': lambda answers: answers['start_containers'] & answers['use_windscribe']
     },
     {
         'type': 'password',
         'name': 'vpn_password',
         'message': 'Windscribe password',
-        'when': lambda answers: answers['use_windscribe']
+        'when': lambda answers: answers['start_containers'] & answers['use_windscribe']
     },
     {
         'type': 'confirm',
         'name': 'vpn_pro',
         'message': 'Windscribe Pro',
-        'when': lambda answers: answers['use_windscribe']
+        'when': lambda answers: answers['start_containers'] & answers['use_windscribe']
     },
     {
         'type': 'editor',
@@ -74,7 +76,7 @@ docker_client = docker.from_env()
 
 if answers['start_containers'] == True:
     for i in range(int(answers['instances'])):
-        print("Starting instance " + str(i))
+        print("Starting instance " + str(i + 1))
         docker_client.containers.run(
             'jdownloader-ws:latest', 
             detach=True,
