@@ -45,19 +45,19 @@ questions = [
         'type': 'input',
         'name': 'vpn_username',
         'message': 'Windscribe username',
-        'when': lambda answers: answers['start_containers'] & answers['use_windscribe']
+        'when': lambda answers: answers['start_containers'] and answers['use_windscribe']
     },
     {
         'type': 'password',
         'name': 'vpn_password',
         'message': 'Windscribe password',
-        'when': lambda answers: answers['start_containers'] & answers['use_windscribe']
+        'when': lambda answers: answers['start_containers'] and answers['use_windscribe']
     },
     {
         'type': 'confirm',
         'name': 'vpn_pro',
         'message': 'Windscribe Pro',
-        'when': lambda answers: answers['start_containers'] & answers['use_windscribe']
+        'when': lambda answers: answers['start_containers'] and answers['use_windscribe']
     },
     {
         'type': 'editor',
