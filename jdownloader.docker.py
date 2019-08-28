@@ -24,14 +24,14 @@ questions = [
         'message': 'My JDownloader Email',
     },
     {
-        'type': 'input',
-        'name': 'jd_volume',
-        'message': 'Download path',
-    },
-    {
         'type': 'password',
         'name': 'jd_password',
         'message': 'My JDownloader password',
+    },
+    {
+        'type': 'input',
+        'name': 'jd_volume',
+        'message': 'Download path',
     },
     {
         'type': 'confirm',
