@@ -17,7 +17,6 @@ questions = [
         'type': 'input',
         'name': 'instances',
         'message': 'JDownloader instances',
-        'when': lambda answers: answers['start_containers']
     },
     {
         'type': 'input',
