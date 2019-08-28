@@ -1,0 +1,15 @@
+certifi==2019.6.16
+chardet==3.0.4
+docker==4.0.2
+idna==2.8
+myjdapi==1.0.2
+prompt-toolkit==1.0.14
+pycrypto==2.6.1
+Pygments==2.4.2
+PyInquirer==1.0.3
+regex==2019.8.19
+requests==2.22.0
+six==1.12.0
+urllib3==1.25.3
+wcwidth==0.1.7
+websocket-client==0.56.0
