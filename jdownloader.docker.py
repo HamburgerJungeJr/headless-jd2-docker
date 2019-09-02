@@ -119,7 +119,7 @@ devices = jd.list_devices()
 for link in answers['links'].splitlines():
     device = devices.pop(0)
 
-    print('Adding download "{}"'.format(link))
+    print('Adding download "{}" to instance {}'.format(link, device['name']))
 
     Jddevice(jd, device).linkgrabber.add_links(params=[
         {
